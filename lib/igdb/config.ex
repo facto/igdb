@@ -6,12 +6,16 @@ defmodule Igdb.Config do
   values from environment variables at runtime.
   """
 
-  @doc """
-  Returns the IGDB API key. Set it in `mix.exs`:
+  # @doc """
+  # Returns the IGDB API key. Set it in `mix.exs`:
+  #
+  #     config :igdb, api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  # """
+  # def api_key, do: from_env(:igdb, :api_key)
 
-      config :igdb, api_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  """
-  def api_key, do: from_env(:igdb, :api_key)
+  def client_id, do: from_env(:igdb, :client_id)
+
+  def access_token, do: from_env(:igdb, :access_token)
 
   @doc """
   Returns the IGDB root path. Set it in `mix.exs`:

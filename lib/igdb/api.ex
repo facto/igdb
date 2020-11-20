@@ -9,7 +9,7 @@ defmodule Igdb.Api do
   end
 
   def auth_headers do
-    ["user-key": Igdb.Config.api_key(), Accept: "Application/json; Charset=utf-8"]
+    ["Client-ID": Igdb.Config.client_id(), Authorization: "Bearer #{Igdb.Config.access_token()}", Accept: "Application/json; Charset=utf-8"]
   end
 
   @doc ~S"""
